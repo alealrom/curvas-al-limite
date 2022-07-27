@@ -1,0 +1,54 @@
+h3 {
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 1.1px;
+  border-left: 6px solid #5d1372;
+}
+
+.standingsGrid {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1.5fr 0.5fr  0.5fr;
+  grid-template-rows: repeat(4, 1fr);
+  place-content: center;
+  align-items: center;
+}
+
+.titleGrid {
+  padding: 5px 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #5d1372;
+  color: #ffffff;
+}
+
+.textGrid {
+  padding: 5px 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2.5;
+  text-transform: uppercase;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.textGrid:hover {
+  color: #5d1372;
+}
+
+.textHover:hover {
+  transition: .3s ease-out all;
+  text-decoration: underline;
+}
+
+.imgFlag {
+  justify-self: center;
+  align-self: center;
+}

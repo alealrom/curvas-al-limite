@@ -1,0 +1,44 @@
+.containerFooter {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    margin-top: 16px;
+    border-top: 1px solid #d0d3d4;
+    justify-content: space-between;
+}
+
+.containerIconTextFooter {
+    display: flex;
+}
+
+.logoFooter {
+    margin-top: 16px;
+    margin-right: 16px;
+}
+
+.textFooter {
+    margin-top: 19px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9em;
+    font-weight: 900;
+    color: black;
+    text-transform: uppercase;
+    line-height: 1.7rem;
+}
+
+.iconsFooter {
+    display: flex;
+    list-style: none;
+}
+
+.iconList {
+    padding-top: 1.2rem;
+}
+
+.iconItem {
+    padding-left: 2rem;
+}
+
+.iconItem:hover {
+    fill: #5d1372 !important;
+}

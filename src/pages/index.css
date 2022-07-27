@@ -1,0 +1,9 @@
+.indexGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
+    grid-template-rows: 1fr;
+    place-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 20px;
+}

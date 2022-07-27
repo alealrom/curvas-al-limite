@@ -1,0 +1,44 @@
+.imagePodcast {
+    object-fit: cover;
+    object-position: center center;
+    width: 380px;
+    height: 255px;
+  }
+
+.podcast {
+    margin-top: -5px;
+    padding: 0px 15px 0px 15px;
+    border: 1px solid #9b9b9b;
+  }
+
+.titlePodcast {
+  width: 100%;
+  padding-left: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  letter-spacing: 1.1px;
+  border-left: 6px solid #5d1372;
+}
+
+.datePodcast {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.summaryPodcast {
+  font-family: "Oswald", sans-serif;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+audio {
+    width: 350px;
+    height: 56px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
