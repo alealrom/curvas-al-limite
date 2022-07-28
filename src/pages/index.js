@@ -1,34 +1,11 @@
 import * as React from "react";
 import "./index.css";
-import { Helmet } from "gatsby-plugin-react-helmet";
 import Banner from "../components/banner/banner";
 import Layout from "../components/layout";
 import Standings from "../components/standings/standings";
 import LastPost from "../components/lastPost/lastPost";
 import LastPodcast from "../components/lastPodcast/lastPodcast";
 import { useStaticQuery, graphql } from "gatsby";
-
-class Application extends React.Component {
-  render() {
-    return (
-      <div className="application">
-        <Helmet>
-          <html lang="es">
-            <head>
-              <meta charset="UTF-8" />
-              <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-              <meta
-                name="viewport"
-                content="width=device-width, initial-scale=1.0"
-              />
-              <title>Inicio</title>
-            </head>
-          </html>
-        </Helmet>
-      </div>
-    );
-  }
-}
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -74,7 +51,7 @@ const IndexPage = () => {
 
   return (
     <main>
-      <Layout>
+      <Layout pageTitle={"Inicio"}>
         <Banner></Banner>
         <div className="indexGrid">
           <div>

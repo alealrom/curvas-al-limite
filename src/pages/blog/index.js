@@ -1,29 +1,43 @@
-import * as React from 'react'
-import { Link, graphql } from 'gatsby'
-import Layout from '../../components/layout'
+import * as React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Layout from "../../components/layout";
+import CardPost from "../../components/cardPost/cardPost";
+import *  as Styles from "../blog/index.module.css"
 
-const BlogPage = ({ }) => {
-    return (
-       <Layout>
-       </Layout>
-    )
-}
-
-export const query = graphql`
+const BlogPage = () => {
+  const data = useStaticQuery(graphql`
     query {
-        allMdx(sort: {fields: frontmatter___date, order: DESC}) {
-            nodes {
-                frontmatter {
-                    author
-                    date(formatString: "MM/DD/YYYY")
-                    description
-                    title
+      allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 1000) {
+        nodes {
+          id
+          slug
+          frontmatter {
+            author
+            date(locale: "es", formatString: "DD MMMM YYYY")
+            description
+            title
+            hero_image_alt
+            hero_image {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
-            id
-            slug
-           }
+          }
         }
+      }
     }
-`
+  `);
 
-export default BlogPage
+  return (
+    <Layout pageTitle={"Blog"}>
+      <section className={Styles.blogGrid}>
+        {" "}
+        {data.allMdx.nodes.map((post) => {
+          return <CardPost post={post}></CardPost>;
+        })}
+      </section>
+    </Layout>
+  );
+};
+
+export default BlogPage;

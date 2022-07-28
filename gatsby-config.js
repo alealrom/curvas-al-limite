@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Formula M",
-    siteUrl: "https://www.yourdomain.tld",
-    author: "@alealrom",
-    description: "",
+    title: `Formula M`,
+    description: `Example project for the Gatsby Head API`,
+    twitterUsername: `@galealrom`,
+    image: `/icon.png`,
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",

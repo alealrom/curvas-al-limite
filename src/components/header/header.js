@@ -22,7 +22,7 @@ const Header = () => {
                 <ul className={Styles.navLinks}>
                     <li><Link to='/'><StaticImage src='../../images/icon.png' alt='Logo Formula M' placeholder='tracedSVG' layout='fixed' width={50} height={50}/></Link></li>
                     <li className={Styles.navLinkItem}><Link to="#" className={Styles.navLinkText}>Sobre Mí</Link></li>
-                    <li className={Styles.navLinkItem}><Link to="#" className={Styles.navLinkText}>Blog</Link></li>
+                    <li className={Styles.navLinkItem}><Link to="/blog" className={Styles.navLinkText}>Blog</Link></li>
                     <li className={Styles.navLinkItem}><Link to="#" className={Styles.navLinkText}>Podcast</Link></li>
                 </ul>
             </nav>
