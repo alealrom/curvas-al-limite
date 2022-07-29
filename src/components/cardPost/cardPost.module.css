@@ -1,14 +1,14 @@
-.post {
+.posts {
   padding: 0px 15px 15px 15px;
   border: 1px solid #9b9b9b;
 }
 
-.imagePost {
+.imagePosts {
   width: fit-content;
   height: fit-content;
 }
 
-.titlePost {
+.titlePosts {
   width: 100%;
   padding-left: 10px;
   font-family: "Oswald", sans-serif;
@@ -20,16 +20,16 @@
   border-left: 6px solid #5d1372;
 }
 
-.titlePost:hover {
+.titlePosts:hover {
   text-decoration: underline;
   color: #5d1372;
 }
 
-.detailsPost {
+.detailsPosts {
   display: flex;
 }
 
-.textPost {
+.textPosts {
   font-family: "Oswald", sans-serif;
   font-size: 1rem;
   font-weight: 600;
@@ -37,7 +37,7 @@
   text-transform: uppercase;
 }
 
-.descriptionPost {
+.descriptionPosts {
   font-family: "Oswald", sans-serif;
   font-size: 0.9rem;
   text-align: justify;

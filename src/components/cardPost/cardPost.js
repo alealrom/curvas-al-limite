@@ -8,23 +8,23 @@ const CardPost = ({ post }) => {
       <article key={post.id}>
         <div>
           <GatsbyImage
-            className={Styles.imagePost}
+            className={Styles.imagePosts}
             image={ getImage(post.frontmatter.hero_image) }
             alt={post.frontmatter.hero_image_alt}
           />
-          <div className={Styles.post}>
+          <div className={Styles.posts}>
           <h2>
-            <Link className={Styles.titlePost} to={`/blog/${post.slug}`}>
+            <Link className={Styles.titlePosts} to={`/blog/${post.slug}`}>
               {post.frontmatter.title}
             </Link>
           </h2>
-          <div className={Styles.detailsPost}>
-            <p className={Styles.textPost}>{post.frontmatter.date}</p>
-            <p className={Styles.textPost}>
+          <div className={Styles.detailsPosts}>
+            <p className={Styles.textPosts}>{post.frontmatter.date}</p>
+            <p className={Styles.textPosts}>
               <i>&nbsp; |&nbsp;{post.frontmatter.author}</i>
             </p>
           </div>
-          <p className={Styles.descriptionPost}>
+          <p className={Styles.descriptionPosts}>
             {post.frontmatter.description}
           </p>
           <div>

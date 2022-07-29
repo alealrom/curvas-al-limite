@@ -10,6 +10,5 @@ section {
     place-content: center;
     align-items: center;
     gap: 20px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #5d1372;
+    padding: 15px 0 20px 0;
 }

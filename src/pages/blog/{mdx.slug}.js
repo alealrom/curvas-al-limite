@@ -1,23 +1,34 @@
 import * as React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
+import *  as Styles from '../blog/{mdx.slug}.module.css'
 
 const BlogPost = ({ data }) => {
     const image = getImage(data.mdx.frontmatter.hero_image)
     return (
         <Layout pageTitle={data.mdx.frontmatter.title}>
-            <h1>{data.mdx.frontmatter.title}</h1>
-            <p>{data.mdx.frontmatter.date}</p>
-            <p><i>{data.mdx.frontmatter.author}</i></p>
-            <GatsbyImage
+            <section className={Styles.containerPost}>
+                <h1 className={Styles.titlePost}>{data.mdx.frontmatter.title}</h1>
+                <div className={Styles.tagTextPost}>
+                <p>Por: &nbsp;</p><p className={Styles.textPost}><i>{data.mdx.frontmatter.author}</i></p>
+                    <p>&nbsp; | &nbsp;</p>
+            <p className={Styles.textPost}><i>{data.mdx.frontmatter.date}</i></p>
+            </div>
+            <GatsbyImage className={Styles.imagePost}
                 image={image}
                 alt={data.mdx.frontmatter.hero_image_alt}
                 />
+            <div className={Styles.bodyPost}>
             <MDXRenderer>
-                {data.mdx.body}
+               {data.mdx.body}
             </MDXRenderer>
+            </div>
+            <a target="_blank"><Link className={Styles.button} to="/blog/">
+              Volver
+            </Link></a> 
+            </section>
         </Layout>
     )
 }
@@ -27,7 +38,7 @@ export const data = graphql`
         mdx(id: {eq: $id}) {
             frontmatter {
                 author
-                date(locale: "es", formatString: "DD MM YYYY")
+                date(locale: "es", formatString: "DD MMMM YYYY")
                 title
                 hero_image_alt
                 hero_image {

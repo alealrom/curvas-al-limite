@@ -50,12 +50,6 @@
     border-bottom: 6px solid #5d1372;
 }
 
-.navLinkText:active {
-    color: #5d1372;
-    padding-bottom: 23px;
-    border-bottom: 6px solid #5d1372;
-}
-
 ul {
     padding-inline-start: 0px;
     align-items: center;
