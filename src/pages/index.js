@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./index.css";
-import Banner from "../components/banner/banner";
+import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../components/layout";
+import Banner from "../components/banner/banner";
 import Standings from "../components/standings/standings";
 import LastPost from "../components/lastPost/lastPost";
 import LastPodcast from "../components/lastPodcast/lastPodcast";
-import { useStaticQuery, graphql } from "gatsby";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`

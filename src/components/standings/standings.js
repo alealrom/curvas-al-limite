@@ -152,7 +152,7 @@ const Standings = () => {
             height={25}
           ></StaticImage>
         </div>
-        <div className={Styles.textGrid}>18</div> 
+        <div className={Styles.textGrid}>18</div>
       </div>
     </div>
   );

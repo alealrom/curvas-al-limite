@@ -1,8 +1,8 @@
 import * as React from "react";
+import * as Styles from "../blog/index.module.css";
 import { useStaticQuery, graphql } from "gatsby";
 import Layout from "../../components/layout";
 import CardPost from "../../components/cardPost/cardPost";
-import *  as Styles from "../blog/index.module.css"
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`

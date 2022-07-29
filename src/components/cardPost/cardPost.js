@@ -5,14 +5,14 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const CardPost = ({ post }) => {
   return (
-      <article key={post.id}>
-        <div>
-          <GatsbyImage
-            className={Styles.imagePosts}
-            image={ getImage(post.frontmatter.hero_image) }
-            alt={post.frontmatter.hero_image_alt}
-          />
-          <div className={Styles.posts}>
+    <article key={post.id}>
+      <div>
+        <GatsbyImage
+          className={Styles.imagePosts}
+          image={getImage(post.frontmatter.hero_image)}
+          alt={post.frontmatter.hero_image_alt}
+        />
+        <div className={Styles.posts}>
           <h2>
             <Link className={Styles.titlePosts} to={`/blog/${post.slug}`}>
               {post.frontmatter.title}
@@ -28,13 +28,15 @@ const CardPost = ({ post }) => {
             {post.frontmatter.description}
           </p>
           <div>
-          <a target="_blank"><Link className={Styles.button} to={`/blog/${post.slug}`}>
-              Leer Más
-            </Link></a>
+            <a target="_blank">
+              <Link className={Styles.button} to={`/blog/${post.slug}`}>
+                Leer Más
+              </Link>
+            </a>
           </div>
         </div>
-        </div>
-      </article>
+      </div>
+    </article>
   );
 };
 
