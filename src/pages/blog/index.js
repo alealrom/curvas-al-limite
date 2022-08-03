@@ -6,8 +6,11 @@ import CardPost from "../../components/cardPost/cardPost";
 
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
-    query {
-      allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 1000) {
+    query ($skip: Int!, $limit: Int!) {
+      allMdx(sort: { fields: frontmatter___date, order: DESC } 
+        limit: $limit
+        skip: $skip
+      ) {
         nodes {
           id
           slug
