@@ -1,0 +1,76 @@
+.aboutGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
+  gap: 55px;
+  padding-top: 16px;
+  padding-bottom: 45px;
+  place-content: center;
+  
+}
+
+.aboutImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.aboutImage:after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 98%;
+  height: 98.5%;
+  border: 6px solid #5d1372;
+}
+
+.aboutTitle {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.aboutBody {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.2rem;
+  text-align: justify;
+  letter-spacing: 1.2px;
+}
+
+.aboutPhrase {
+  font-family: "Oswald", sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+.aboutDetails {
+  display: grid;
+  grid-template-rows: 1fr;
+  background-color: #CEB8D4;
+  height: 40px;
+  width: 90%;
+  margin-left: 25px;
+  position: relative;
+  transform: rotate(1deg);
+}
+
+.phraseCursive {
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 3.5rem;
+  line-height: 0;
+  letter-spacing: 1.2px;
+  color: #000000;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 23px;
+}
+
+span {
+  top: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}

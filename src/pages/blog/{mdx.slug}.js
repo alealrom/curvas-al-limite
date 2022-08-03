@@ -21,11 +21,12 @@ const BlogPost = ({ data }) => {
             <i>{data.mdx.frontmatter.date}</i>
           </p>
         </div>
+        <div className={Styles.imagePost}>
         <GatsbyImage
-          className={Styles.imagePost}
           image={image}
           alt={data.mdx.frontmatter.hero_image_alt}
         />
+        </div>
         <div className={Styles.bodyPost}>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </div>

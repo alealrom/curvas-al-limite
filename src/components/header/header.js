@@ -35,7 +35,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={Styles.navLinkItem}>
-              <Link to="#" className={Styles.navLinkText}>
+              <Link to="/about" className={Styles.navLinkText}>
                 Sobre Mí
               </Link>
             </li>
