@@ -1,44 +1,42 @@
 const path = require("path");
 const { paginate } = require("gatsby-awesome-pagination");
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const prefixBlogPostUrl = "/blog";
-  const blogTemplate = path.resolve("src/pages/blog/index.js");
+  const prefixPodcastsUrl = "/podcast";
+
+  const blogTemplate = path.resolve("src/templates/blog/index.js");
+  const podcastsTemplate = path.resolve("src/templates/podcast/podcast.js");
 
   const result = await getAllPosts(graphql);
+  const resultPodcasts = await getAllPodcast(graphql);
 
-  const posts = result.data.allMdx.nodes.map((posts, i) => {
-    return {
-      ...posts,
-      previous: result.data.allMdx.edges[i].previous,
-      next: result.data.allMdx.edges[i].next,
-    };
-  });
+  const posts = result.data.allMdx.nodes;
+  const podcasts = resultPodcasts.data.allPodcastRssFeedEpisode.nodes;
 
-  // Create all blog pages with paginator
   paginate({
     createPage,
     items: posts,
-    itemsPerPage: 2,
+    itemsPerPage: 1,
     pathPrefix: ({ pageNumber, numberOfPages }) => pageNumber === 0 ? prefixBlogPostUrl : `${prefixBlogPostUrl}/page`,
     component: blogTemplate
   })
-};
+
+  paginate({
+    createPage,
+    items: podcasts,
+    itemsPerPage: 9,
+    pathPrefix: ({ pageNumber, numberOfPages }) => pageNumber === 0 ? prefixPodcastsUrl : `${prefixPodcastsUrl}/page`,
+    component: podcastsTemplate
+  })
+}
 
 async function getAllPosts(graphql) {
   return graphql(`
     {
       allMdx(sort: { fields: frontmatter___date, order: DESC }, limit: 1000) {
-        edges {
-          previous {
-            slug
-          }
-          next {
-            slug
-          }
-        }
         nodes {
           id
           slug
@@ -58,4 +56,28 @@ async function getAllPosts(graphql) {
       }
     }
   `);
+}
+
+async function getAllPodcast(graphql) {
+  return graphql(`
+    {
+        allPodcastRssFeedEpisode(limit: 1000) {
+          nodes {
+            item {
+              title
+              isoDate(locale: "es", formatString: "DD MMMM YYYY")
+              itunes {
+                duration
+                summary
+                image
+              }
+              enclosure {
+                type
+                url
+              }
+            }
+          }
+        }
+    }
+    `);
 }
