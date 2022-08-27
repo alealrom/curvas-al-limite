@@ -1,16 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: `Formula M`,
-    description: `Example project for the Gatsby Head API`,
-    twitterUsername: `@galealrom`,
-    image: `/icon.png`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Curvas al Límite",
+    url: "https://curvasallimite.com",
+    siteUrl: "https://curvasallimite.com",
+    author: "Alejandra Álvarez Romero",
+    nickname: "alealrom",
+    description:
+      "Curvas al límite, resalta la labor y huella que dejan o han dejado las mujeres en los diferentes campos del automovilismo. Destacando que con perseverancia los sueños de miles de niñas y mujeres se pueden cumplir.",
+    twitterUsername: "@alealrom",
+    blogPostPrefixPath: "/blog",
+    blogPostsPaginatePrefixPath: "/blog/page",
+    image: "src/images/icon.png",
+    social: [
+      "github#https://github.com/alealrom",
+      "twitter#https://twitter.com/alealrom",
+      "email#mailto:ale@alealrom.co",
+    ],
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,30 +34,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/blog` 
+        path: `${__dirname}/blog`,
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Oswald`,
-        ],
-        display: 'swap'
-      }
+        fonts: [`Oswald`],
+        display: "swap",
+      },
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "Formula M",
-        short_name: "Formula M",
-        start_url: "/",
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
-        icon: "/src/images/icon.png",
+        icon: "src/assets/images/icon.png",
       },
     },
     {
@@ -53,17 +58,17 @@ module.exports = {
       options: {
         formatAsDateString: true,
         formatting: {
-          format: 'DD de MMMM YYYY',
+          format: "DD de MMMM YYYY",
           utc: false,
         },
-        locale: 'es',
+        locale: "es",
       },
     },
     {
       resolve: `gatsby-source-podcast-rss-feed`,
       options: {
         feedURL: `https://media.rss.com/aar-periodista/feed.xml`,
-        id: 'guid',
+        id: "guid",
       },
     },
   ],
