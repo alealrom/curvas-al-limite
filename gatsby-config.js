@@ -6,7 +6,7 @@ module.exports = {
     author: "Alejandra Álvarez Romero",
     nickname: "alealrom",
     description:
-      "Curvas al límite, resalta la labor y huella que dejan o han dejado las mujeres en los diferentes campos del automovilismo. Destacando que con perseverancia los sueños de miles de niñas y mujeres se pueden cumplir.",
+      "Curvas al Límite, resalta la labor y huella que dejan o han dejado las mujeres en los diferentes campos del automovilismo. Destacando que con perseverancia los sueños de miles de niñas y mujeres se pueden cumplir.",
     twitterUsername: "@alealrom",
     blogPostPrefixPath: "/blog",
     blogPostsPaginatePrefixPath: "/blog/page",

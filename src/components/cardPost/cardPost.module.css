@@ -43,6 +43,19 @@
   text-align: justify;
 }
 
+.boxButton {
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+  margin-left: 69%;
+}
+
+.boxButton:hover {
+  transition: .3s ease-out all;
+  background-color: #5d1372;
+  border: 1px solid #9b9b9b;
+  border-radius: 4px;
+}
+
 .button {
   font-family: "Oswald", sans-serif;
   font-size: 1.1rem;
@@ -50,17 +63,13 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #5d1372;
-  padding: 16px 16px;
-  border: 1px solid #9b9b9b;
+  padding: 15px 15px;
   border-radius: 4px;
-  margin-right: 0;
-  margin-left: 70%;
   display: block;
   text-align: center;
 }
 
 .button:hover {
-  transition: .3s ease-out all;
-  background-color: #5d1372;
   color: #ffffff;
 }
+

@@ -18,7 +18,8 @@ const CardPodcast = ({ podcast }) => {
             controls
             src={podcast.enclosure.url}
             type={podcast.enclosure.type}
-          ></audio>
+          >
+          </audio>
         </div>
       </div>
     </div>

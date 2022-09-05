@@ -28,11 +28,11 @@ const CardPost = ({ post }) => {
             {post.frontmatter.description}
           </p>
           <div>
-            <a target="_blank">
+            <button target="_blank" className={Styles.boxButton}>
               <Link className={Styles.button} to={`/blog/${post.slug}`}>
                 Leer Más
               </Link>
-            </a>
+            </button>
           </div>
         </div>
       </div>
