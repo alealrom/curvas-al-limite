@@ -1,9 +1,22 @@
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  color: #5d1372;
+}
+
+span {
+  place-self: center;
+  margin-left: 15px;
+}
+
 .aboutGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
-  gap: 55px;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 30px 55px;
   padding-top: 16px;
-  padding-bottom: 45px;
   place-content: center;
 }
 
@@ -19,7 +32,7 @@
   left: 25px;
   top: 25px;
   width: 98%;
-  height: 98.5%;
+  height: 93%;
   border: 6px solid #5d1372;
 }
 
@@ -37,26 +50,36 @@
   letter-spacing: 1.2px;
 }
 
+.aboutSubtitle {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color:#5d1372;
+}
+
 .aboutPhrase {
   font-family: "Oswald", sans-serif;
   font-size: 2.5rem;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1.2px;
+  margin-top: 16px;
 }
 
 .aboutDetails {
   display: grid;
   grid-template-rows: 1fr;
-  background-color: #CEB8D4;
+  background-color: #ceb8d4;
   height: 40px;
-  width: 100%;
+  width: 65%;
   transform: rotate(1deg);
+  margin: -15px auto 0px auto;
 }
 
 .phraseCursive {
   font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   line-height: 0;
   letter-spacing: 1.2px;
   color: #000000;
@@ -65,7 +88,51 @@
   place-self: center;
 }
 
-span {
-  margin-left: 15px;
-  place-self: center;
+.authorPhrase {
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.2px;
+  margin: 5px auto;
+}
+
+.moreAboutGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 550px));
+    gap: 30px 55px;
+    place-content: center;
+}
+
+.aboutList {
+  margin-left: 22px;
+}
+.aboutBody::marker {
+  color: #5d1372;
+}
+
+@media screen and (max-width: 1080px) {
+  .aboutGrid {
+    grid-template-columns: minmax(250px, 550px);
+    place-content: center;
+  }
+
+  .aboutImage:after {
+    height: 98.9%;
+  }
+
+  .aboutPhrase {
+    font-size: 1.7rem;
+  }
+  
+  .aboutDetails {
+    height: 20px;
+    width: 100%;
+    place-content: center;
+  }
+  
+  .phraseCursive {
+    font-size: 2rem;
+    margin-top: 5px;
+  }
 }

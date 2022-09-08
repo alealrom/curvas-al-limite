@@ -21,8 +21,9 @@ const Footer = () => {
         </div>
         <div>
           <p className={Styles.textFooter}>
-            © Formula M |&nbsp;Desarrollado por{" "}
-            <a href="https://alealrom.co/">alealrom</a>
+            © Curvas al Límite |&nbsp;Desarrollado por{" "}
+            <a target="_blank"
+              rel="noreferrer" href="https://alealrom.co/">alealrom</a>
           </p>
         </div>
       </div>
