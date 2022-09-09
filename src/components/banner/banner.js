@@ -8,18 +8,18 @@ const Banner = () => {
     <main>
       <div className={Styles.bannerGrid}>
         <div>
-          <Link to="#">
+          <Link to="/blog/tatiana-calderon-en-la-formula-2/">
             <StaticImage
               className={Styles.bannerImage}
-              src="../../images/redbull.jpg"
-              alt="Logo Formula M"
+              src="../../images/Tatiana_Calderon.png"
+              alt="Tatiana Calderón uniforme Fórmula 2."
               placeholder="tracedSVG"
             />
             <div className={Styles.containerBannerText}>
               <div
                 className={`${Styles.bannerText} ${Styles.bannerTextPosition1}`}
               >
-                Ale
+                Tata
               </div>
             </div>
           </Link>
@@ -28,15 +28,15 @@ const Banner = () => {
           <Link to="#">
             <StaticImage
               className={`${Styles.bannerImageBig} ${Styles.bannerImage}`}
-              src="../../images/redbull.jpg"
-              alt="Logo Formula M"
+              src="../../images/CAL_Spotify.png"
+              alt="Card promoción Curvas Al Límite en"
               placeholder="tracedSVG"
             />
             <div className={Styles.containerBannerText}>
               <div
                 className={`${Styles.bannerText} ${Styles.bannerTextPosition2}`}
               >
-                Ale
+                Cal
               </div>
             </div>
           </Link>
@@ -45,15 +45,15 @@ const Banner = () => {
           <Link to="#">
             <StaticImage
               className={Styles.bannerImage}
-              src="../../images/redbull.jpg"
-              alt="Logo Formula M"
+              src="../../images/W_Series.png"
+              alt="Monoplaza W Series Racing."
               placeholder="tracedSVG"
             />
             <div className={Styles.containerBannerText}>
               <div
-                className={`${Styles.bannerText} ${Styles.bannerTextPosition1}`}
+                className={`${Styles.bannerText1} ${Styles.bannerTextPosition3}`}
               >
-                Ale
+                W Series
               </div>
             </div>
           </Link>
