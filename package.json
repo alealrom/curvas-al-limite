@@ -44,6 +44,8 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "date-and-time": "^2.4.1",
+    "file-type": "^18.0.0",
     "gatsby-awesome-pagination": "^0.3.8",
     "parse-url": "^8.1.0"
   }
