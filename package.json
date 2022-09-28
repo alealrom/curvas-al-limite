@@ -1,8 +1,8 @@
 {
-  "name": "curvas-al-limite",
+  "name": "formula-m",
   "version": "1.0.0",
   "private": true,
-  "description": "Curvas al Límite, resalta la labor y huella que dejan o han dejado las mujeres en los diferentes campos del automovilismo. Destacando que con perseverancia los sueños de miles de niñas y mujeres se pueden cumplir.",
+  "description": "formula-m",
   "author": "Alejandra Álvarez Romero | ale@alealrom.co | @alealrom",
   "keywords": [
     "gatsby"
@@ -44,14 +44,6 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
-    "ansi-html": "0.0.9",
-    "cross-fetch": "^3.1.5",
-    "date-and-time": ">=0.14.2",
-    "dicer": "^0.3.1",
-    "file-type": "^18.0.0",
-    "gatsby-awesome-pagination": "^0.3.8",
-    "node-fetch": "^3.2.10",
-    "nth-check": "^2.1.1",
-    "parse-url": "^8.1.0"
+    "gatsby-awesome-pagination": "^0.3.8"
   }
 }
